@@ -1,0 +1,21 @@
+{
+  "scriptFile": "__init__.py",
+  "bindings": [
+    {
+      "name": "msg",
+      "type": "serviceBusTrigger",
+      "direction": "in",
+      "queueName": "trackteck",
+      "connection": "tracktech_SERVICEBUS"
+    },
+    {
+      "type": "cosmosDB",
+      "direction": "out",
+      "name": "outdoc",
+      "databaseName": "tracktech",
+      "collectionName": "tracktech",
+      "createIfNotExists": "true",
+      "connectionStringSetting": "AzureCosmosDBConnectionString"
+    }
+  ]
+}
